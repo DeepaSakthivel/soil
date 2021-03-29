@@ -1,0 +1,53 @@
+{% load static %}
+
+<html>
+    <head>
+        <title>SoilNutrients Data</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    </head>
+
+<body>
+    <div class="login-box">
+        <h1>PREDICTING MOISTURE FOR SOIL</h1>
+        <h2>KNeighborsRegressor</h2>
+        <form action="calculate">
+            <div class="user-box">
+                <input type="text" name="exp1" required="" value="{{exp1}}">
+                <label>Ca</label>
+            </div>
+            <div class="user-box">
+                 <input type="text" name="exp2" required="" value="{{exp2}}">
+                <label>Mg</label>
+            </div> 
+            <div class="user-box">
+                <input type="text" name="exp3" required="" value="{{exp3}}">
+                <label>K</label>
+            </div>
+            <div class="user-box">
+                <input type="text" name="exp4" required="" value="{{exp4}}">
+                <label>S</label>
+            </div>
+            <div class="user-box">
+                <input type="text" name="exp5" required="" value="{{exp5}}">
+                <label>N</label>
+            </div>
+            <div class="user-box">
+                <input type="text" name="exp6" required="" value="{{exp6}}">
+                <label>Lime</label>
+            </div>
+            <div class="user-box">
+                <input type="text" name="exp7" required="" value="{{exp7}}">
+                <label>C</label>
+            </div>
+            <div class="user-box">
+                <input type="text" name="exp8" required="" value="{{exp8}}">
+                <label>P</label>
+            </div>
+            <input type="Submit" name="submit" value="predict" class="submitbtn" />
+        </form><br>
+        <h2>Moisture : {{predicted}}</h2>
+    </div>
+</body>
+</html>
+
+           
